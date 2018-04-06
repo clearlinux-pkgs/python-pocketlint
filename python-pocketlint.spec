@@ -4,13 +4,12 @@
 #
 Name     : python-pocketlint
 Version  : 0.15
-Release  : 4
+Release  : 5
 URL      : https://github.com/rhinstaller/pocketlint/archive/0.15.tar.gz
 Source0  : https://github.com/rhinstaller/pocketlint/archive/0.15.tar.gz
 Summary  : Support for running pylint against projects
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
-Requires: python-pocketlint-legacypython
 Requires: python-pocketlint-python3
 Requires: python-pocketlint-python
 BuildRequires : pbr
@@ -23,19 +22,9 @@ BuildRequires : setuptools
 Addon pylint modules and configuration settings for checking the validity of
 Python-based source projects.
 
-%package legacypython
-Summary: legacypython components for the python-pocketlint package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the python-pocketlint package.
-
-
 %package python
 Summary: python components for the python-pocketlint package.
 Group: Default
-Requires: python-pocketlint-legacypython
 Requires: python-pocketlint-python3
 
 %description python
@@ -59,25 +48,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512067161
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523041675
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1512067161
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
