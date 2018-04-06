@@ -4,7 +4,7 @@
 #
 Name     : python-pocketlint
 Version  : 0.15
-Release  : 6
+Release  : 7
 URL      : https://github.com/rhinstaller/pocketlint/archive/0.15.tar.gz
 Source0  : https://github.com/rhinstaller/pocketlint/archive/0.15.tar.gz
 Summary  : Support for running pylint against projects
@@ -48,7 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523042070
+export SOURCE_DATE_EPOCH=1523049113
 python3 setup.py build -b py3
 
 %install
