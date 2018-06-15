@@ -14,7 +14,7 @@ Requires: python-pocketlint-python3
 Requires: python-pocketlint-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
