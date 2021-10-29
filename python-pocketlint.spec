@@ -4,7 +4,7 @@
 #
 Name     : python-pocketlint
 Version  : 0.22
-Release  : 32
+Release  : 33
 URL      : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Source0  : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Summary  : Support for running pylint against projects
