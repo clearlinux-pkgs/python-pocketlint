@@ -4,7 +4,7 @@
 #
 Name     : python-pocketlint
 Version  : 0.22
-Release  : 33
+Release  : 34
 URL      : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Source0  : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Summary  : Support for running pylint against projects
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1633730178
+export SOURCE_DATE_EPOCH=1635876830
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
