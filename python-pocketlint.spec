@@ -4,7 +4,7 @@
 #
 Name     : python-pocketlint
 Version  : 0.22
-Release  : 35
+Release  : 36
 URL      : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Source0  : https://github.com/rhinstaller/pocketlint/archive/0.22/pocketlint-0.22.tar.gz
 Summary  : Support for running pylint against projects
@@ -13,11 +13,10 @@ License  : GPL-2.0 GPL-2.0+
 Requires: python-pocketlint-license = %{version}-%{release}
 Requires: python-pocketlint-python = %{version}-%{release}
 Requires: python-pocketlint-python3 = %{version}-%{release}
-Requires: pylint
-Requires: python-polib
+Requires: pypi(polib)
 BuildRequires : buildreq-distutils3
-BuildRequires : pylint
-BuildRequires : python-polib
+BuildRequires : pypi(polib)
+BuildRequires : pypi(pylint)
 
 %description
 Addon pylint modules and configuration settings for checking the validity of
@@ -61,7 +60,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635876830
+export SOURCE_DATE_EPOCH=1641840452
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
